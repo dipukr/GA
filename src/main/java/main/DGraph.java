@@ -3,7 +3,7 @@ package main;
 import java.util.List;
 import java.util.ArrayList;
 
-public class DirectedGraph {
+public class DGraph {
 	
 	private List<Node> nodes = new ArrayList<Node>();
 
