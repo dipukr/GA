@@ -1,7 +1,16 @@
 package main;
 
 public class Main {
-	public static void main(final String[] args) {
+	public static void main(String[] args) {
+		/*
+		 * byte[][] data = {{1,6,7},{8,4,0},{5,2,3}}; State start = new State(data);
+		 * State goal = new State(State.goal); Problem problem = new EightPuzzle(start,
+		 * goal); Map<String, State> prev = Search.aStar(problem); Stack<State> states =
+		 * new Stack<>(); states.add(problem.getGoalState()); while
+		 * (!states.peek().equals(start))
+		 * states.add(prev.get(states.peek().toString()));
+		 * System.out.printf("Path size: %d\n", states.size()); Anim.anim(states);
+		 */
 		Graph graph = new Graph();
 		Node a = Node.of("A");
 		Node b = Node.of("B");
