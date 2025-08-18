@@ -2,7 +2,6 @@ package main;
 
 import java.util.Map;
 import java.util.Stack;
-import common.Anim;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
