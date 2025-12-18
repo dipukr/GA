@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class Dijkstra {
-
+	
 	private Queue<Edge> queue = new PriorityQueue<>();
 	private Weighted wg;
 	private double dist[];
@@ -20,7 +20,7 @@ public class Dijkstra {
 	}
 
 	public void search(int start) {
-		queue.offer(Edge.of(start, 0));
+		queue.offer(new Edge(start, 0));
 		dist[start] = 0;
 		visited[start] = true;
 		while (!queue.isEmpty()) {

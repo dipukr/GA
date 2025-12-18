@@ -1,7 +1,6 @@
 package main;
 
 public class Edge implements Comparable<Edge> {
-
 	public int node;
 	public double cost;
 	
@@ -18,9 +17,5 @@ public class Edge implements Comparable<Edge> {
 		if (this.cost < that.cost) return -1;
 		if (this.cost > that.cost) return +1;
 		return 0;
-	}
-	
-	public static Edge of(int node, double cost) {
-		return new Edge(node, cost);
 	}
 }

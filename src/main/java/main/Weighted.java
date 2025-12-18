@@ -14,7 +14,7 @@ public class Weighted {
 	}
 
 	public void addEdge(int start, int end, int cost) {
-		adj.get(start).add(Edge.of(end, cost));
+		adj.get(start).add(new Edge(end, cost));
 	}
 	
 	public List<Edge> adjacents(int u) {

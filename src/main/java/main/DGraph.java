@@ -12,6 +12,6 @@ public class DGraph {
 	}
 
 	public void addEdge(Node start, Node end) {
-		start.adjacentNodes.add(end);
+		start.adjacents.add(end);
 	}
 }

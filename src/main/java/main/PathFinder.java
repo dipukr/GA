@@ -1,8 +1,9 @@
 package main;
 
-import java.util.Map;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class PathFinder {
 
@@ -15,7 +16,7 @@ public class PathFinder {
 		dist.put(start, 0);
 		while (!queue.isEmpty()) {
 			Node curr = queue.poll();
-			for (Node node: curr.adjacentNodes)
+			for (Node node: curr.adjacents)
 				if (!dist.containsKey(node)) {
 					dist.put(node, dist.get(curr) + 1);
 					queue.offer(node);
@@ -33,10 +34,10 @@ public class PathFinder {
 		return dist.get(node);
 	}
 
-	public Iterable<String> pathTo(Node node) {
-		var path = new LinkedList<String>();
+	public List<Node> pathTo(Node node) {
+		var path = new LinkedList<Node>();
 		while (node != null && dist.containsKey(node)) {
-			path.addFirst(node.toString());
+			path.addFirst(node);
 			node = prev.get(node);
 		}
 		return path;

@@ -6,9 +6,9 @@ public class Search {
 
 	public void DFS(Node node) {
 		visit(node);
-		for (Node adjacentNode: node.adjacentNodes)
-			if (!adjacentNode.marked)
-				DFS(adjacentNode);
+		for (Node adjacent: node.adjacents)
+			if (!adjacent.marked)
+				DFS(adjacent);
 	}
 
 	public void BFS(Node startNode) {
@@ -17,9 +17,9 @@ public class Search {
 		visit(startNode);
 		while (!queue.isEmpty()) {
 			Node currNode = queue.poll();
-			for (Node adjacentNode: currNode.adjacentNodes) {
-				if (!adjacentNode.marked) {
-					visit(currNode);
+			for (Node adjacent: currNode.adjacents) {
+				if (!adjacent.marked) {
+					visit(adjacent);
 					queue.offer(currNode);
 				}
 			}	

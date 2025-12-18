@@ -12,7 +12,7 @@ public class Graph {
 	}
 
 	public void addEdge(Node start, Node end) {
-		start.adjacentNodes.add(end);
-		end.adjacentNodes.add(start);
+		start.adjacents.add(end);
+		end.adjacents.add(start);
 	}
 }
